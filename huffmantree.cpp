@@ -92,8 +92,9 @@ void HuffTree::creatHuffTree(DataType arr[], int n)
 
 void HuffTree::githuffcode()
 {
-	githuffcode(root,len);
+  githuffcode(root,len);
 }
+
 void HuffTree::githuffcode(HTreeNode* BHT, int len)
 {
 	static int  arr[15];
@@ -102,7 +103,7 @@ void HuffTree::githuffcode(HTreeNode* BHT, int len)
 
 		if (BHT->leftChild==NULL&&BHT->rightChild==NULL)
    		{  
-			cout << "½áµã" << BHT->data << "µÄ¹þ·òÂü±àÂëÎª" << endl;
+			cout << "Â½Ã¡ÂµÃ£" << BHT->data << "ÂµÃ„Â¹Ã¾Â·Ã²Ã‚Ã¼Â±Ã Ã‚Ã«ÃŽÂª" << endl;
 		for  (int i = 0; i < len;  i++)
 			{
 				cout << arr[i];
