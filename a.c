@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 void fun(char* str)
 {
 char tmp='a';
