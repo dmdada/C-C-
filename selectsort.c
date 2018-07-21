@@ -15,8 +15,7 @@ void Selectionsort(int arr[], int size)
                   {
                           if (arr[max]>arr[j])
 
-                                    max = j;
-                              
+                                    max = j;                             
                   }
 
 
