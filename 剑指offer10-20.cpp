@@ -1,5 +1,5 @@
 
-	int  NumberOf1(int n) {//Çó¶ş½øÖÆÒ»µÄ¸öÊı
+	int  NumberOf1(int n) {//æ±‚äºŒè¿›åˆ¶ä¸€çš„ä¸ªæ•°
 		int count=0;
 		while (n)
 		{
@@ -9,8 +9,7 @@
 		return count;
 	}
 	
-	
-		double Power(double base, int exponent) {//ÊıÖµ´Î·½
+		double Power(double base, int exponent) {//æ•°å€¼æ¬¡æ–¹
 			double value = 1;
 			int n = exponent;
 			if (n == 0)
@@ -36,20 +35,20 @@
 				return 1.0 / value;
 			}
 		}
-		void reOrderArray(vector<int> &array)//µ÷ÕûÊı×éÎªÇ°ÃæÆæÊı£¬ºóÃæÅ¼Êı
+		void reOrderArray(vector<int> &array)//è°ƒæ•´æ•°ç»„ä¸ºå‰é¢å¥‡æ•°ï¼Œåé¢å¶æ•°
 		{
 			for (int i = 0; i < array.size(); i++)
 			{
 				for (int j = array.size() - 1; j>i; j--)
 				{
-					if (array[j] % 2 == 1 && array[j - 1] % 2 == 0) //Ç°Å¼ºóÆæ½»»»
+					if (array[j] % 2 == 1 && array[j - 1] % 2 == 0) //å‰å¶åå¥‡äº¤æ¢
 					{
 						swap(array[j], array[j - 1]);
 					}
 				}
 			}
 		}
-		void boubble_sort(vector<int> &array)//Ã°ÅİÅÅĞò
+		void boubble_sort(vector<int> &array)//å†’æ³¡æ’åº
 		{
 
 			for (int  i = 0; i < array.size(); i++)
@@ -63,7 +62,7 @@
 				}
 			}
 		}
-		ListNode* FindKthToTail(ListNode* pListHead, unsigned int k) {//µ¹Êık¸ö½Úµã
+		ListNode* FindKthToTail(ListNode* pListHead, unsigned int k) {//å€’æ•°kä¸ªèŠ‚ç‚¹
 			if (pListHead == NULL | k <= 0)
 			{
 				return NULL;
@@ -82,7 +81,7 @@
 			}
 			return pListHead;
 		}
-		ListNode* ReverseList(ListNode* pHead) //ÄæÖÃÁ´±í
+		ListNode* ReverseList(ListNode* pHead) //é€†ç½®é“¾è¡¨
 		{
 			if (pHead->next == NULL|pHead==NULL)
 			{
@@ -100,7 +99,7 @@
 			pHead = q;
 			return pHead;
 		}
-		ListNode* Merge(ListNode* pHead1, ListNode* pHead2)//ºÏ²¢Á´±í
+		ListNode* Merge(ListNode* pHead1, ListNode* pHead2)//åˆå¹¶é“¾è¡¨
 		{
 			if (pHead1 == NULL)
 			{
@@ -139,7 +138,7 @@
 				return subtree(pRoot->left, pRoot2->left) && subtree(pRoot->right, pRoot2->right);
 			}
 		}
-		bool HasSubtree(TreeNode* pRoot1, TreeNode* pRoot2)//ÕÒ×ÓÊ÷
+		bool HasSubtree(TreeNode* pRoot1, TreeNode* pRoot2)//æ‰¾å­æ ‘
 		{
 			bool result = false;
 			if (pRoot1 != NULL&&pRoot2 != NULL){
@@ -160,7 +159,7 @@
 			return result;
         }
 
-		void Mirror(TreeNode *pRoot)//¾µÏñ¶ş²æÊ÷
+		void Mirror(TreeNode *pRoot)//é•œåƒäºŒå‰æ ‘
 		{
 			if (pRoot != NULL)
 			{
@@ -173,7 +172,7 @@
 			}
 		}
 
-		/*vector<int> printMatrix(vector<vector<int> > matrix)//µÚÒ»´ÎÏ¹Ğ´
+		/*vector<int> printMatrix(vector<vector<int> > matrix)//ç¬¬ä¸€æ¬¡çå†™
 		{
 			
 			int rows = matrix.size()-1;
@@ -233,25 +232,25 @@
 			}
 			return ret;
 		}*/
-		vector<int> printMatrix(vector<vector<int> > matrix) {//´òÓ¡Ë³Ê±Õë¾ØÕó
+		vector<int> printMatrix(vector<vector<int> > matrix) {//æ‰“å°é¡ºæ—¶é’ˆçŸ©é˜µ
 			int row = matrix.size();
 			int col = matrix[0].size();
 			vector<int> res;
 			int circle = ((row<col ? row : col) - 1) / 2 + 1;
 			for (int i = 0; i != circle; i++){
-				//´Ó×óµ½ÓÒ
+				//ä»å·¦åˆ°å³
 				for (int j = i; j != col - i; j++){
 					res.push_back(matrix[i][j]);
 				}
-				//´ÓÉÏµ½ÏÂ
+				//ä»ä¸Šåˆ°ä¸‹
 				for (int k = i + 1; k != row - i; k++){
 					res.push_back(matrix[k][col - i - 1]);
 				}
-				//´ÓÓÒµ½×ó
+				//ä»å³åˆ°å·¦
 				for (int m = col - i - 2; (m >= i) && (row - i - 1 != i); m--){
 					res.push_back(matrix[row - i - 1][m]);
 				}
-				//´ÓÏÂÍùÉÏ
+				//ä»ä¸‹å¾€ä¸Š
 				for (int n = row - i - 2; (n>i) && (col - i - 1 != i); n--){
 					res.push_back(matrix[n][i]);
 				}
