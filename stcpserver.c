@@ -12,7 +12,6 @@ typedef struct sockaddr_in sockaddr_in;
 typedef struct FdSet{
   fd_set set;
   int max_fd;
-
 }FdSet;
 
 void FdSetInit(FdSet*fdset)
@@ -21,7 +20,6 @@ void FdSetInit(FdSet*fdset)
   fdset->max_fd=0;
   return;
 }
-
 void FdSetAdd(FdSet*fdset,int fd)
 {
 FD_SET(fd,&fdset->set);
