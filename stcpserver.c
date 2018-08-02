@@ -52,10 +52,10 @@ int ProessRequest(int new_sock)
   char buf[1024]={0};
   ssize_t read_size=read(new_sock,buf,sizeof(buf)-1);
   if(read_size<0)
-  {
+    {
     perror("read");
     return -1;
-  }
+    }
   if(read_size==0){
     printf("read done!\n");
     return 0;
@@ -70,10 +70,10 @@ int ServerInit(char*ip,short port)
 {
   int fd=socket(AF_INET,SOCK_STREAM,0);
   if(fd<0)
-  {
+    {
     perror("socket");
     return -1;
-  }
+    }
   sockaddr_in addr;
   addr.sin_family=AF_INET;
   addr.sin_addr.s_addr=inet_addr(ip);
