@@ -9,8 +9,7 @@ int Maxbit(int arr[], int size)
             while (arr[i]>p)
             {
                     p *= 10;
-                   count++;
-                              
+                   count++;            
             }
               
       }
