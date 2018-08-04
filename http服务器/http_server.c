@@ -107,7 +107,6 @@ pthread_detach(tid);
 }
 }
 
-
 int main(int argc, char* argv[]) {
   if(argc!=3){
     printf("usage.http_server[ip][port]\n");
