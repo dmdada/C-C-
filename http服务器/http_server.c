@@ -9,7 +9,6 @@
 #include"http_server.h"
 typedef struct sockaddr sockaddr;
 typedef struct sockaddr_in sockaddr_in;
-
 void HandleRequest(int new_sock){
 //1.读取并解析请求
 //2.静态或者动态生成页面
@@ -64,7 +63,6 @@ END:
 //  如果请求POST请求（一定带参数，参数通过body来传给服务器，那么也返回动态界面。
 //  
  }
-
 
 
 void* ThreadEntry(void* arg){
