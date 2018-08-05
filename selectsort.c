@@ -28,7 +28,6 @@ void Selectionsort(int arr[], int size)
                       }
                         
         }
-
 }
 
 int main()
