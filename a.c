@@ -27,6 +27,7 @@ str++;
 printf("没找到！");
 }
 
+
 int main()
 {
 char*str="abacdebaf";
